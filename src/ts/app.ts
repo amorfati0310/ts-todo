@@ -1,12 +1,18 @@
 // model
 import TodoListModel from "./model/TodoList";
 // view
-import TodoInputView from "./view/TodoInputView";
+import TodoForm from "./view/TodoForm";
 
 import "../scss/app.scss";
 
-const todoInputView = new TodoInputView(".new-todo");
+document.addEventListener("DOMContentLoaded", () => {
+  const todoForm = new TodoForm({
+    formEl: "#todo-form",
+    todoInputEl: ".new-todo"
+  });
 
-const todoListModel = new TodoListModel();
+  const todoListModel = new TodoListModel();
 
-console.log("todoListModel", TodoListModel);
+  console.log("todoListModel", todoListModel);
+  console.log("todoInputView", todoForm);
+});
