@@ -1,6 +1,6 @@
 class TodoInputView {
-  el: HTMLElement;
-  constructor({ selector: string }) {
+  el: HTMLElement | null;
+  constructor(selector: string) {
     this.el = document.querySelector(selector);
   }
 }
